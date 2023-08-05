@@ -1,0 +1,119 @@
+@auth_token = 5|nF5Rz7wDYsog11MI145xIrCaccacSOGRnDkRkdPO
+@admin_id = 99d02c3b-d612-4ec2-96d3-3907411f4bc0
+### login
+POST http://127.0.0.1:8000/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "yes@yes.co",
+    "password": "test1234."
+}
+
+### register
+POST http://127.0.0.1:8000/api/auth/register
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Abdessalam",
+    "surname": "Chakiri",
+    "username":"avselom",
+    "password": "test1234.",
+    "email": "yes@yes.co"
+}
+
+### logout
+POST http://127.0.0.1:8000/api/auth/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "email": "yes@yes.co",
+  "password": "test1234."
+}
+
+### current user
+GET http://127.0.0.1:8000/api/auth/me
+Authorization: Bearer {{auth_token}}
+
+@user_id = 99d02eff-69e7-49be-8e97-51b26da927d3
+
+### get all users
+GET http://127.0.0.1:8000/api/users
+Authorization: Bearer {{auth_token}}
+
+### get user by id
+GET http://127.0.0.1:8000/api/users/{{user_id}}
+Authorization: Bearer {{auth_token}}
+
+### create user
+POST http://127.0.0.1:8000/api/users
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+    "name": "Test",
+    "surname": "Test",
+    "username":"test1",
+    "password": "test1234.",
+    "email": "test1@test.io"
+}
+
+### update user
+PUT http://127.0.0.1:8000/api/users
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+    "id": "{{user_id}}",
+    "name": "Test",
+    "surname": "Test",
+    "password": "test1234."
+}
+
+### delete user
+DELETE http://127.0.0.1:8000/api/users/{{admin_id}}
+Authorization: Bearer {{auth_token}}
+
+@blog_id = 99d038c3-8e63-4eb2-a545-dcdc9d0f1522
+### get all blogs
+GET http://127.0.0.1:8000/api/blogs
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{auth_token}}
+
+### get blog by id
+GET http://127.0.0.1:8000/api/blogs/{{blog_id}}
+Accept: application/json
+Authorization: Bearer {{auth_token}}
+
+### create blog
+POST http://127.0.0.1:8000/api/blogs
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+    "title": "Testo",
+    "content": "Testo",
+    "user_id": "{{admin_id}}"
+}
+
+### update blog
+PUT http://127.0.0.1:8000/api/blogs
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+    "_id": "{{blog_id}}",
+    "title": "Testo yes"
+}
+
+### delete blog
+DELETE http://127.0.0.1:8000/api/blogs/{{blog_id}}
+Authorization: Bearer {{auth_token}}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<title>Blogs | Blogify</title>
+
+	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon"/>
+	<link href="css/app.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar js-sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="#">
+					<span class="align-middle">Blogify</span>
+				</a>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Pages
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="index.html">
+							<i class="align-middle" data-feather="book"></i> <span class="align-middle">Blogs</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="profile.html">
+							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="#">
+							<i class="align-middle" data-feather="settings"></i> <span
+								class="align-middle">Settings</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="about.html">
+							<i class="align-middle" data-feather="help-circle"></i> <span class="align-middle">About</span>
+						</a>
+					</li>
+
+				</ul>
+
+
+			</div>
+		</nav>
+
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle js-sidebar-toggle">
+					<i class="hamburger align-self-center"></i>
+				</a>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#"
+								data-bs-toggle="dropdown">
+								<i class="align-middle" data-feather="settings"></i>
+							</a>
+
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
+								data-bs-toggle="dropdown">
+								<img src="img/icons/blogify.png" class="avatar img-fluid rounded me-1"
+									alt="" /> <span class="text-dark user-name" ></span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="profile.html"><i class="align-middle me-1"
+										data-feather="user"></i> Profile</a>
+								<a class="dropdown-item" href="index.html"><i class="align-middle me-1"
+										data-feather="book"></i> Blogs</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1"
+										data-feather="settings"></i> Settings & Privacy</a>
+								<a class="dropdown-item" href="about.html"><i class="align-middle me-1"
+										data-feather="help-circle"></i> Help Center</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item logout-button" href="#">Log out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content">
+				<div class="container-fluid p-0">
+					<form id="blog-form" method="post" class="needs-validation" novalidate>
+						<div class="mb-3 d-flex justify-content-between mx-auto">
+							<h1 class="h3 d-inline align-middle">Your blog</h1>
+							<button class="btn btn-success btn-lg save-blog-button" type="submit">
+								Save Blog
+							</button>
+						</div>
+						<div class="row">
+							<div class="col-12 col-lg-6 mx-auto">
+
+
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Title</h5>
+									</div>
+									<div class="card-body">
+										<input type="text" class="form-control" name="title"
+											placeholder="Uncover Your Hidden Potential." required>
+										<div class="invalid-feedback">
+											Please provide a valid title.
+										</div>
+									</div>
+								</div>
+
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Content</h5>
+									</div>
+									<div class="card-body">
+										<textarea class="form-control" rows="5" name="content"
+											placeholder="Silence your inner critic and listen to your intuition - you have brilliance within waiting to shine."
+											required></textarea>
+
+										<div class="invalid-feedback">
+											Please provide a valid content.
+										</div>
+									</div>
+								</div>
+								<input type="hidden" id="_id" name="_id" required readonly />
+								<input type="hidden" id="user_id" name="user_id" required readonly />
+							</div>
+						</div>
+					</form>
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-start">
+							<p class="mb-0">
+								<a class="text-muted" href="https://avselom.me"
+									target="_blank"><strong>Blogify</strong></a> - <a class="text-muted"
+									href="https://avselom.me" target="_blank"><strong>Abdessalam Chakiri</strong></a>
+								&copy;
+							</p>
+						</div>
+						<div class="col-6 text-end">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://avselom.me" target="_blank">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://avselom.me" target="_blank">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://avselom.me" target="_blank">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="https://avselom.me" target="_blank">Terms</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="js/app.js"></script>
+	<script src="js/main.js" type="module"></script>
+
+	<script>
+
+		let blog = JSON.parse(localStorage.getItem('blog'));
+
+		document.querySelector('#blog-form [name="title"]').value = blog?.title || '';
+		document.querySelector('#blog-form [name="content"]').value = blog?.content || '';
+		document.querySelector('#blog-form [name="_id"]').value = blog?.['_id']|| '';
+		document.querySelector('#user_id').value = localStorage.getItem('user_id');
+
+	</script>
+</body>
+
+</html>
